@@ -21,7 +21,7 @@
 | [`constructors/kirqqn_thumb/`](constructors/kirqqn_thumb/) | Python-конструктор обкладинок YouTube 1280×720 |
 | [`constructors/kirqqn_guide/`](constructors/kirqqn_guide/) | Конструктор карток вертикальних гайдів, v1.3 |
 | [`constructors/kirqqn_episode/`](constructors/kirqqn_episode/) | Конструктор графіки довгих епізодів |
-| [`constructors/web/`](constructors/web/) | Знімки веб-конструкторів: обкладинки, титри епізодів, гайди. Відкриваються в браузері |
+| [`constructors/web/`](constructors/web/) | Знімки веб-конструкторів, відкриваються в браузері: обкладинки для всіх форматів (YouTube, вертикальні, Instagram), титри епізодів, гайди |
 | [`templates/`](templates/) | Пресети рендеру Resolve (XML), шаблон Fusion для гайду 9:16 |
 | [`archive/`](archive/) | Застарілий візуальний патерн Dawnwalker. Тільки історія, для нових робіт не використовувати |
 
@@ -32,7 +32,7 @@
 - Титри епізодів: https://claude.ai/artifact/XJRUVtEiW1AWCbMrpyTyMM
 - Гайди: https://claude.ai/artifact/HfbybHdFD4qqxQZJh6vLxg
 
-Знімки в цьому репозиторії зроблено 2026-11-04. Якщо онлайн-версія новіша, вона має пріоритет.
+Знімки в цьому репозиторії зроблено 2026-11-04 (брендбук і конструктор обкладинок оновлено того ж дня, пізніше). Якщо онлайн-версія новіша, вона має пріоритет.
 
 ## Як користуватися конструкторами
 

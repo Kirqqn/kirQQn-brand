@@ -1,0 +1,20 @@
+[
+  {
+    "image": "examples/example_screenshot.png",
+    "line1": "БАКІР",
+    "line2": "КІНЕЦЬ ГРИ",
+    "hl": "КІНЕЦЬ",
+    "badge": "#13",
+    "emotion": "win",
+    "out": "dawnwalker_13.jpg"
+  },
+  {
+    "image": "examples/example_screenshot.png",
+    "line1": "ДО БИТВИ",
+    "line2": "З КСАНТЕ",
+    "hl": "КСАНТЕ",
+    "badge": "#14",
+    "emotion": "look",
+    "out": "dawnwalker_14.jpg"
+  }
+]

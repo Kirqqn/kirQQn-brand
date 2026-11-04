@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.pdf binary
+*.mp4 binary
+*.mov binary
+*.wav binary
+*.ttf binary
+*.zip binary
+*.comp text eol=crlf
+*.setting text eol=crlf
+*.xml text eol=crlf

@@ -1,0 +1,65 @@
+{
+  "game": "Dawnwalker",
+  "guide": "Coen",
+  "part": 1,
+  "parts": 2,
+  "start": 1,
+  "grand": 4,
+  "cards": [
+    {
+      "type": "cover",
+      "image": "f_forest.jpg",
+      "ox": 0.3,
+      "title": "Find the secret glade",
+      "hl": "secret",
+      "sub": "steps 01–02 · no spoilers",
+      "emotion": "look"
+    },
+    {
+      "type": "step",
+      "image": "f_forest.jpg",
+      "ox": -0.1,
+      "oy": -0.2,
+      "lens": [
+        570,
+        740,
+        625,
+        150
+      ],
+      "mark": 0.84,
+      "title": "Listen to Coen",
+      "verb": "LISTEN FOR",
+      "action": "our secret glade",
+      "outcome": "A berry clearing up in the mountains",
+      "tone": "info"
+    },
+    {
+      "type": "step",
+      "image": "f_smuggler.jpg",
+      "zoom": 1.12,
+      "ox": 0.85,
+      "oy": -0.75,
+      "lens": [
+        100,
+        318,
+        600,
+        160
+      ],
+      "mark": 0.17,
+      "title": "Answer the smuggler",
+      "verb": "CHOOSE",
+      "action": "That's me.",
+      "outcome": "Coen admits who he is",
+      "tone": "ok"
+    },
+    {
+      "type": "next",
+      "image": "f_smuggler.jpg",
+      "zoom": 1.12,
+      "ox": 1,
+      "oy": -0.75,
+      "title": "Get past the smugglers",
+      "emotion": "look"
+    }
+  ]
+}

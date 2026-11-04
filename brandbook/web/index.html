@@ -1,0 +1,661 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>kirQQn Брендбук</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Unbounded:wght@900&display=swap">
+<style>
+/* Layout: a single dark broadcast "screen" — chapter rail of mono labels on the left, wide artwork column on the right; artwork bleeds, text keeps to ~64ch. */
+:root {
+  --void: #07070B; --panel: #0F0F15; --line: #22222C; --ink: #F4F4F6; --smoke: #8B8B98; --dim: #5E5E6A;
+  --lime: #C6FF1A; --pink: #FF2D6F; --cyan: #2EE6FF;
+  --display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --body: 'Golos Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--void); color: var(--ink); font: 400 16px/1.6 var(--body); }
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(255,255,255,.06) 1.2px, transparent 1.3px); background-size: 32px 32px; z-index: 0; }
+.page { position: relative; z-index: 1; max-width: 1320px; margin: 0 auto; padding-inline: 20px; padding-block: 0 80px; }
+nav.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: flex; gap: 18px; align-items: center; justify-content: space-between; padding: 14px 0; background: linear-gradient(var(--void) 70%, transparent); flex-wrap: wrap; }
+nav.top .id { font: 700 13px var(--mono); letter-spacing: .12em; display: flex; align-items: center; gap: 10px; }
+nav.top .id i { width: 9px; height: 9px; border-radius: 50%; background: var(--pink); display: inline-block; animation: rec 1.6s steps(2) infinite; }
+@keyframes rec { 50% { opacity: .2; } }
+@media (prefers-reduced-motion: reduce) { nav.top .id i { animation: none; } }
+nav.top ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; padding: 0; font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+nav.top a { color: var(--smoke); text-decoration: none; }
+nav.top a:hover, nav.top a:focus-visible { color: var(--lime); }
+a:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+
+.hero { padding-block: 40px 30px; display: grid; gap: 22px; }
+.hero img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+.hero .lead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+.hero h1 { font: 900 clamp(30px, 5vw, 64px)/1.02 var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.015em; }
+.hero h1 em { font-style: normal; color: var(--lime); }
+.hero p { margin: 0; color: var(--smoke); max-width: 60ch; font-size: 17px; }
+.hero p strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 820px) { .hero .lead { grid-template-columns: minmax(0, 1fr); } }
+
+section.ch { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 36px; padding-block: 64px; border-top: 1px solid var(--line); }
+@media (max-width: 900px) { section.ch { grid-template-columns: minmax(0, 1fr); gap: 18px; padding-block: 44px; } }
+.rail { font: 700 12px/1.6 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--smoke); }
+.rail b { display: block; color: var(--lime); font-size: 13px; }
+.body { min-width: 0; display: grid; gap: 26px; }
+h2 { font: 900 clamp(24px, 3.2vw, 40px)/1.1 var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h3 { font: 700 13px var(--mono); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 8px; color: var(--ink); }
+.prose { max-width: 64ch; color: #CFCFD6; }
+.prose p { margin: 0 0 12px; }
+.prose strong { color: var(--ink); font-weight: 600; }
+figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+figure img, figure video { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: #000; max-width: 100%; }
+figcaption { font: 500 12px var(--mono); color: var(--smoke); letter-spacing: .04em; }
+.g2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.g3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+@media (max-width: 720px) { .g2, .g3 { grid-template-columns: minmax(0, 1fr); } }
+
+.ideas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--line); }
+.ideas > div { padding: 22px; border-right: 1px solid var(--line); display: grid; gap: 10px; align-content: start; }
+.ideas > div:last-child { border-right: 0; }
+.ideas .k { font: 700 11px var(--mono); color: var(--lime); letter-spacing: .12em; }
+.ideas h4 { font: 900 19px/1.2 var(--display); margin: 0; }
+.ideas p { margin: 0; color: var(--smoke); font-size: 15px; }
+@media (max-width: 820px) { .ideas { grid-template-columns: minmax(0, 1fr); } .ideas > div { border-right: 0; border-bottom: 1px solid var(--line); } .ideas > div:last-child { border-bottom: 0; } }
+
+.logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.logos .tile { aspect-ratio: 16 / 7; display: grid; place-items: center; padding: 8%; border: 1px solid var(--line); max-width: 100%; }
+.logos .tile img { width: 100%; height: 100%; object-fit: contain; border: 0; background: none; }
+.t-void { background: var(--void); } .t-lime { background: var(--lime); } .t-white { background: #fff; } .t-panel { background: #15151D; }
+@media (max-width: 720px) { .logos { grid-template-columns: minmax(0, 1fr); } }
+.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.rules > div { border: 1px solid var(--line); padding: 16px 18px; background: var(--panel); }
+.rules p { margin: 0; color: var(--smoke); font-size: 15px; }
+@media (max-width: 720px) { .rules { grid-template-columns: minmax(0, 1fr); } }
+
+.emos { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+.emo { border: 1px solid var(--line); background: var(--panel); padding: 14px 16px 18px; display: grid; gap: 8px; align-content: start; }
+.emo img { width: 100%; aspect-ratio: 1; object-fit: contain; border: 0; background: radial-gradient(circle at 50% 55%, rgba(198,255,26,.08), transparent 65%); }
+.emo .n { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.emo .n b { font: 900 16px var(--display); }
+.emo .n code { font: 500 11px var(--mono); color: var(--dim); }
+.emo p { margin: 0; color: var(--smoke); font-size: 14px; }
+
+.swatches { display: grid; grid-template-columns: 2.4fr 1.2fr 1fr .8fr .6fr; border: 1px solid var(--line); min-height: 220px; }
+.sw { padding: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; min-width: 0; }
+.sw b { font: 900 18px var(--display); display: block; }
+.sw span { font: 500 12px var(--mono); display: block; opacity: .8; overflow-wrap: anywhere; }
+.sw.void { background: var(--void); color: var(--ink); } .sw.ink { background: var(--ink); color: var(--void); } .sw.lime { background: var(--lime); color: var(--void); } .sw.pink { background: var(--pink); color: var(--ink); } .sw.cyan { background: var(--cyan); color: var(--void); }
+@media (max-width: 820px) { .swatches { grid-template-columns: minmax(0, 1fr); } }
+.colnotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.colnotes p { margin: 0; font-size: 15px; color: var(--smoke); } .colnotes b { color: var(--ink); font-weight: 600; }
+@media (max-width: 720px) { .colnotes { grid-template-columns: minmax(0, 1fr); } }
+
+.type { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.spec { border: 1px solid var(--line); background: var(--panel); padding: 22px; display: grid; gap: 14px; min-width: 0; }
+.spec .big { font: 900 clamp(34px, 5vw, 64px)/1 var(--display); overflow-wrap: anywhere; }
+.spec .big.m { font: 700 clamp(26px, 3.6vw, 44px)/1.1 var(--mono); }
+.spec p { margin: 0; color: var(--smoke); font-size: 15px; }
+.spec .meta { font: 500 12px var(--mono); color: var(--dim); }
+@media (max-width: 820px) { .type { grid-template-columns: minmax(0, 1fr); } }
+
+.voice { display: grid; gap: 0; border: 1px solid var(--line); }
+.voice > div { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 18px; padding: 16px 20px; border-bottom: 1px solid var(--line); align-items: baseline; }
+.voice > div:last-child { border-bottom: 0; }
+.voice q { quotes: none; font: 900 clamp(16px, 2vw, 22px)/1.25 var(--display); }
+.voice span { color: var(--smoke); font-size: 15px; }
+@media (max-width: 720px) { .voice > div { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; }
+th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 700 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--smoke); background: var(--panel); }
+td.n { font: 500 13px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.v { font: 500 13px var(--mono); color: var(--lime); min-width: 150px; }
+.gpair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.gpair figure img { aspect-ratio: 9 / 16; object-fit: cover; }
+.vfig { max-width: 360px; }
+.ovpair img { max-width: 720px; }
+#guides figure img[src*="anatomy"] { max-width: 900px; }
+.vfig video { aspect-ratio: 9 / 16; }
+.guide-row { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.dlrow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.dlrow button, .dlrow a { background: var(--void); color: var(--ink); border: 1px solid var(--ink); padding: 11px 14px; font: 700 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+.dlrow .primary { background: var(--lime); color: var(--void); border-color: var(--lime); }
+.dlrow button:focus-visible, .dlrow a:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
+.dlrow .msg { font: 500 12px var(--mono); color: var(--smoke); }
+.dlrow .msg.ok { color: var(--lime); } .dlrow .msg.err { color: var(--pink); }
+@media (max-width: 720px) { .gpair, .guide-row { grid-template-columns: minmax(0, 1fr); } .vfig { max-width: 100%; } }
+
+.prose a { color: var(--lime); }
+td code { font: 500 12px var(--mono); color: var(--lime); overflow-wrap: anywhere; }
+tr:last-child td { border-bottom: 0; }
+.dos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.dos ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.dos li { padding-left: 26px; position: relative; color: #CFCFD6; font-size: 15px; }
+.dos li::before { position: absolute; left: 0; top: 0; font: 700 14px var(--mono); }
+.dos .yes li::before { content: "+"; color: var(--lime); }
+.dos .no li::before { content: "×"; color: var(--pink); }
+@media (max-width: 720px) { .dos { grid-template-columns: minmax(0, 1fr); } }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.cta a { display: inline-block; background: var(--lime); color: var(--void); text-decoration: none; font: 700 14px var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 14px 18px; }
+.cta a:hover { filter: brightness(1.08); }
+.cta span { color: var(--smoke); font-size: 14px; }
+
+.actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.actions button { background: var(--void); color: var(--ink); border: 1px solid var(--line); padding: 8px 12px; font: 700 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.actions button.primary { background: var(--lime); color: var(--void); border-color: var(--lime); }
+.actions button:hover { filter: brightness(1.1); }
+.actions button:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
+.actions .msg { font: 500 12px var(--mono); color: var(--smoke); min-height: 1em; }
+.actions .msg.ok { color: var(--lime); } .actions .msg.err { color: var(--pink); }
+.actions .url { font: 500 12px var(--mono); color: var(--ink); background: var(--panel); border: 1px solid var(--line); padding: 6px 8px; user-select: all; overflow-wrap: anywhere; }
+.tl { display: grid; gap: 10px; }
+.tl .bar { display: flex; height: 64px; border: 1px solid var(--line); min-width: 0; }
+.tl .seg { position: relative; display: flex; align-items: center; justify-content: center; font: 700 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; border-right: 1px solid var(--void); overflow: hidden; white-space: nowrap; min-width: 0; }
+.tl .seg:last-child { border-right: 0; }
+.tl .s-hook { flex: 7; background: #1B1B24; color: var(--ink); }
+.tl .s-intro { flex: 4; background: var(--lime); color: var(--void); }
+.tl .s-body { flex: 70; background: #121219; color: var(--smoke); justify-content: flex-start; padding-left: 14px; }
+.tl .s-exit { flex: 6; background: #1B1B24; color: var(--ink); }
+.tl .s-outro { flex: 10; background: var(--pink); color: var(--ink); }
+.tl .pin { position: absolute; top: 6px; bottom: 6px; width: 3px; }
+.tl .pin::after { content: attr(data-l); position: absolute; top: -2px; left: 7px; font: 700 10px var(--mono); letter-spacing: .04em; }
+.tl .p-skip { background: var(--lime); } .tl .p-skip::after { color: var(--lime); }
+.tl .p-qq { background: var(--ink); } .tl .p-qq::after { color: var(--ink); }
+.tl .p-one { background: var(--pink); } .tl .p-one::after { color: var(--pink); }
+.tl .p-gl { background: var(--cyan); } .tl .p-gl::after { color: var(--cyan); }
+.tl .legend { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 10px; font-size: 13px; color: var(--smoke); }
+.tl .legend b { display: block; color: var(--ink); font: 700 12px var(--mono); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2px; }
+@media (max-width: 720px) { .tl .legend { grid-template-columns: minmax(0,1fr); } .tl .pin::after { display: none; } .tl .seg { font-size: 9px; } }
+.packgrid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+@media (max-width: 720px) { .packgrid { grid-template-columns: minmax(0,1fr); } }
+figcaption code, .rules code, .prose code { font: 500 12px var(--mono); color: var(--lime); }
+.vert { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 20px; align-items: start; }
+.vert img { width: 100%; height: auto; border: 1px solid var(--line); display: block; }
+@media (max-width: 720px) { .vert { grid-template-columns: minmax(0,1fr); } .vert img { max-width: 240px; } }
+.checks { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; counter-reset: c; }
+.checks li { counter-increment: c; padding-left: 34px; position: relative; color: #CFCFD6; font-size: 15px; }
+.checks li::before { content: counter(c, decimal-leading-zero); position: absolute; left: 0; top: 1px; font: 700 12px var(--mono); color: var(--lime); }
+@media print { .actions { display: none !important; } }
+footer { border-top: 1px solid var(--line); padding-top: 26px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font: 500 12px var(--mono); color: var(--dim); letter-spacing: .06em; }
+</style>
+
+<div class="page">
+  <nav class="top" aria-label="Розділи">
+    <div class="id"><i aria-hidden="true"></i>kirQQn · БРЕНДБУК v1.6</div>
+    <ul>
+      <li><a href="#idea">Ідея</a></li><li><a href="#logo">Логотип</a></li><li><a href="#qq">Емоції</a></li><li><a href="#color">Колір</a></li><li><a href="#type">Шрифти</a></li><li><a href="#voice">Голос</a></li><li><a href="#youtube">YouTube</a></li><li><a href="#instagram">Instagram</a></li><li><a href="#motion">Рух</a></li><li><a href="#edit">Монтаж</a></li><li><a href="#guides">Гайди</a></li><li><a href="#episodes">Епізоди</a></li><li><a href="#specs">Розміри</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <img src="img/hero.webp" width="2000" height="1000" alt="Логотип kirQQn: білі літери kir і n, дві салатові Q, з хвоста правої Q капає блакитна сльоза. Під ним слоган «Ламаю ігри. Іноді навпаки.»">
+    <div class="lead">
+      <h1>Дві Q — це <em>очі</em>. Іноді вони плачуть.</h1>
+      <p><strong>kirQQn</strong> — україномовний канал летсплеїв. Уся айдентика стоїть на одному жарті, який уже був у ніку: «qq» в ігровому сленгу означає сльози. Тож дві Q стали обличчям каналу, а їхня емоція — вердиктом кожного епізоду.</p>
+    </div>
+    <div class="actions" aria-label="Завантажити або поділитися">
+      <button type="button" class="primary" id="dl">Завантажити PDF</button>
+      <button type="button" id="share">Скопіювати посилання</button>
+      <span class="msg" id="msg" role="status"></span>
+    </div>
+  </header>
+
+  <section class="ch" id="idea">
+    <div class="rail"><b>01</b>Ідея</div>
+    <div class="body">
+      <h2>Три рішення, на яких тримається все інше</h2>
+      <div class="ideas">
+        <div><span class="k">ЗНАК</span><h4>QQ як обличчя</h4><p>Внутрішній просвіт літери Q в Unbounded уже має пласке «нижнє повіко». Знак не намальований поверх шрифту — він знайдений у ньому.</p></div>
+        <div><span class="k">СИСТЕМА</span><h4>Емоція = вердикт</h4><p>Сім станів очей. Плач, перемога, лють, гейм овер. Глядач бачить результат епізоду ще до кліку, а превʼю каналу впізнаються в стрічці без логотипа.</p></div>
+        <div><span class="k">ЖЕСТ</span><h4>Розбитий екран</h4><p>Тріщини скла розходяться від QQ на банері, аватарі, постах і в інтро. «Ламаю ігри» — буквально.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="logo">
+    <div class="rail"><b>02</b>Логотип</div>
+    <div class="body">
+      <h2>Вордмарк і знак</h2>
+      <div class="logos">
+        <div class="tile t-void"><img src="img/kirqqn_wordmark_color.svg" alt="Основний кольоровий вордмарк на темному"></div>
+        <div class="tile t-lime"><img src="img/kirqqn_wordmark_black.svg" alt="Чорний вордмарк на салатовому"></div>
+        <div class="tile t-white"><img src="img/kirqqn_wordmark_black.svg" alt="Чорний вордмарк на білому"></div>
+        <div class="tile t-panel"><img src="img/kirqqn_mark_qq_cry_color.svg" alt="Знак QQ зі сльозою"></div>
+      </div>
+      <div class="rules">
+        <div><h3>Охоронне поле</h3><p>Навколо вордмарка — не менше висоти літери n з усіх боків. Нічого не ставити ближче.</p></div>
+        <div><h3>Мінімальний розмір</h3><p>Вордмарк — від 120 px завширшки. Менше — тільки знак QQ, він читається навіть у 32 px.</p></div>
+        <div><h3>Кольори літер</h3><p>kir і n — білі, QQ — салатові. На світлому чи салатовому фоні — весь логотип чорний.</p></div>
+        <div><h3>Сльоза</h3><p>Тільки блакитна і тільки з хвоста правої Q. На одноколірних версіях — колір логотипа.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="qq">
+    <div class="rail"><b>03</b>Емоції QQ</div>
+    <div class="body">
+      <h2>Сім станів очей</h2>
+      <p class="prose">Обираєш емоцію за тим, чим закінчився епізод. Вона стоїть на превʼю, на хайлайтах і в аутро. Файли з прозорим фоном лежать в архіві — ними ж можна користуватися як емодзі на Twitch чи в YouTube-членстві.</p>
+      <div class="emos">
+        <div class="emo"><img src="img/qq_cry.webp" alt="QQ плаче" width="420" height="420"><div class="n"><b>Плач</b><code>qq_cry</code></div><p>Базовий стан і аватар. Фейл, програш, «ну як так».</p></div>
+        <div class="emo"><img src="img/qq_look.webp" alt="QQ дивиться" width="420" height="420"><div class="n"><b>Погляд</b><code>qq_look</code></div><p>Нейтральний. Анонси, «дивись далі». Очі показують, куди дивитись.</p></div>
+        <div class="emo"><img src="img/qq_shock.webp" alt="QQ в шоці" width="420" height="420"><div class="n"><b>Шок</b><code>qq_shock</code></div><p>Скример, раптова смерть, несподіваний поворот сюжету.</p></div>
+        <div class="emo"><img src="img/qq_win.webp" alt="QQ перемога" width="420" height="420"><div class="n"><b>Перемога</b><code>qq_win</code></div><p>Клатч, знайдений скарб, бос з першої спроби.</p></div>
+        <div class="emo"><img src="img/qq_rage.webp" alt="QQ лють" width="420" height="420"><div class="n"><b>Лють</b><code>qq_rage</code></div><p>Нечесний бос, баг, «ще раз?!».</p></div>
+        <div class="emo"><img src="img/qq_dead.webp" alt="QQ гейм овер" width="420" height="420"><div class="n"><b>Гейм овер</b><code>qq_dead</code></div><p>«Гра зламала мене». Вердикт аутро у варіанті поразки.</p></div>
+        <div class="emo"><img src="img/qq_sleep.webp" alt="QQ спить" width="420" height="420"><div class="n"><b>Офлайн</b><code>qq_sleep</code></div><p>Пауза, перерва між іграми, епізод переноситься.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="color">
+    <div class="rail"><b>04</b>Колір</div>
+    <div class="body">
+      <h2>Пʼять кольорів, кожен має роботу</h2>
+      <div class="swatches" role="list">
+        <div class="sw void" role="listitem"><b>Void</b><span>#07070B · фон усього · ~70%</span></div>
+        <div class="sw ink" role="listitem"><b>Ink</b><span>#F4F4F6 · текст, kir і n</span></div>
+        <div class="sw lime" role="listitem"><b>Lime</b><span>#C6FF1A · QQ, акцент</span></div>
+        <div class="sw pink" role="listitem"><b>Rage</b><span>#FF2D6F · навпаки, лють</span></div>
+        <div class="sw cyan" role="listitem"><b>Tear</b><span>#2EE6FF · сльози</span></div>
+      </div>
+      <div class="colnotes">
+        <p><b>Салатовий</b> — тільки на одному елементі в кадрі: QQ або виділеному слові. Два салатові акценти поруч сперечаються.</p>
+        <p><b>Рожевий</b> — друга половина слогана, лють, поразка, REC. Ніколи не замінює салатовий у знаку на темному.</p>
+        <p><b>Блакитний</b> існує тільки для сліз і бризок. Не текст, не фон, не кнопки.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="type">
+    <div class="rail"><b>05</b>Шрифти</div>
+    <div class="body">
+      <h2>Важкий заголовок, технічний підпис</h2>
+      <div class="type">
+        <div class="spec"><div class="big">ЛАМАЮ ІГРИ</div><p>Заголовки, превʼю, гасла. Тільки великими літерами, щільно. Вордмарк набраний цим самим шрифтом, тому все звучить одним голосом.</p><span class="meta">Unbounded Black 900 · кирилиця · SIL OFL</span></div>
+        <div class="spec"><div class="big m">REC 00:41:07</div><p>Підписи, бейджі, лічильники, таймкоди, HUD. Робить усе схожим на інтерфейс гри.</p><span class="meta">JetBrains Mono 500 / 700 · кирилиця · SIL OFL</span></div>
+      </div>
+      <p class="prose">Обидва шрифти безкоштовні для комерційного використання (SIL Open Font License) і є в Google Fonts — ставляться в DaVinci Resolve, Canva і Photopea за хвилину.</p>
+    </div>
+  </section>
+
+  <section class="ch" id="voice">
+    <div class="rail"><b>06</b>Голос</div>
+    <div class="body">
+      <h2>Самоіронія замість «привіт, друзі»</h2>
+      <div class="voice">
+        <div><q>Ламаю ігри. Іноді навпаки.</q><span>Слоган. Банер, опис каналу, інтро.</span></div>
+        <div><q>Гру зламано. / Гра зламала мене.</q><span>Бінарний фінал епізоду й аутро.</span></div>
+        <div><q>Плакати разом веселіше.</q><span>Заклик підписатись.</span></div>
+        <div><q>+1 qq</q><span>Лічильник власних фейлів у кадрі й коментарях.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="youtube">
+    <div class="rail"><b>07</b>YouTube</div>
+    <div class="body">
+      <h2>Банер, аватар, превʼю</h2>
+      <figure><img src="img/banner.webp" width="1800" height="1013" alt="Банер YouTube з логотипом по центру, тріщинами скла і HUD-підписами"><figcaption>Банер 2560×1440. Логотип і слоган — у зоні 1546×423, яку видно на всіх пристроях.</figcaption></figure>
+      <figure><img src="img/banner_zones.webp" width="1800" height="1013" alt="Той самий банер з позначеними зонами TV, десктопа і всіх пристроїв" loading="lazy"><figcaption>Перевірка зон: TV, десктоп і зона, яку видно на всіх пристроях.</figcaption></figure>
+      <div class="g3">
+        <figure><img src="img/avatar_main_void.webp" width="520" height="520" alt="Основний аватар: салатові QQ зі сльозою на темному" loading="lazy" style="border-radius:50%"><figcaption>Основний аватар</figcaption></figure>
+        <figure><img src="img/avatar_alt_lime.webp" width="520" height="520" alt="Альтернативний аватар: чорні QQ на салатовому" loading="lazy" style="border-radius:50%"><figcaption>Контрастний — для TikTok і списків</figcaption></figure>
+        <figure><img src="img/avatar_alt_look.webp" width="520" height="520" alt="Аватар з очима, що дивляться" loading="lazy" style="border-radius:50%"><figcaption>Запасний «погляд»</figcaption></figure>
+      </div>
+      <figure><img src="img/avatar_sizes.webp" width="1600" height="600" alt="Аватар у розмірах від 400 до 32 пікселів" loading="lazy"><figcaption>Знак тримається до 32 px — розміру аватарки в коментарях.</figcaption></figure>
+      <div class="g3">
+        <figure><img src="img/thumb1.webp" width="960" height="540" alt="Приклад превʼю: Вампір зламав мене, емоція гейм овер" loading="lazy"><figcaption>Поразка → гейм овер</figcaption></figure>
+        <figure><img src="img/thumb2.webp" width="960" height="540" alt="Приклад превʼю: Дюрандаль за 5 хвилин, емоція перемога" loading="lazy"><figcaption>Скарб → перемога</figcaption></figure>
+        <figure><img src="img/thumb3.webp" width="960" height="540" alt="Приклад превʼю: Цей бос нечесний, емоція лють" loading="lazy"><figcaption>Бос → лють, рожевий акцент</figcaption></figure>
+      </div>
+      <figure><img src="img/thumb_feed.webp" width="1600" height="560" alt="Три превʼю у розмірі стрічки телефона з позначкою тривалості" loading="lazy"><figcaption>Розмір стрічки. Правий нижній кут вільний — там YouTube ставить тривалість. Фони на прикладах намальовані; у справжніх превʼю — скрін з гри.</figcaption></figure>
+      <div class="rules">
+        <div><h3>Чистий кадр — для всіх обкладинок</h3><p>Фон превʼю й плаката — кадр гри <strong>без інтерфейсу</strong>: без субтитрів і реплік, HUD (здоров'я, компас, квести, предмети), підказок кнопок, міток, меню, курсора, оверлеїв Resolve і плеєра YouTube.</p></div>
+        <div><h3>Як знайти такий кадр</h3><p>Катсцена або момент між репліками. Перевір нижню третину кадру на 100 % масштабі: субтитр легко пропустити на мініатюрі. Якщо інтерфейс не прибрати зсувом чи масштабом — бери інший кадр.</p></div>
+      </div>
+      <div class="cta"><a href="https://claude.ai/artifact/A7sXWUUqKfV3M4jMqJQ148" target="_blank" rel="noopener">Конструктор превʼю →</a><span>Скрін, два рядки, емоція — і готовий JPG до 2 МБ.</span></div>
+    </div>
+  </section>
+
+  <section class="ch" id="instagram">
+    <div class="rail"><b>08</b>Instagram</div>
+    <div class="body">
+      <h2>Сітка, хайлайти, сторіс</h2>
+      <div class="g2">
+        <figure><img src="img/ig_grid.webp" width="900" height="1050" alt="Профіль Instagram: три пости складаються в одну панораму з логотипом" loading="lazy"><figcaption>Стартовий триптих 3:4 — три пости збираються в одну панораму. Публікувати в порядку 3 → 2 → 1.</figcaption></figure>
+        <div style="display:grid;gap:18px;align-content:start;min-width:0">
+          <figure><img src="img/ig_hl.webp" width="1600" height="520" alt="Пʼять обкладинок хайлайтів з різними емоціями QQ" loading="lazy"><figcaption>Хайлайти: Епізоди, Кліпи, Фейли, Перемоги, Анонси.</figcaption></figure>
+          <div class="g2">
+            <figure><img src="img/story1.webp" width="540" height="960" alt="Сторіс «Новий епізод» українською" loading="lazy"><figcaption>Сторіс · UA</figcaption></figure>
+            <figure><img src="img/story1_en.webp" width="540" height="960" alt="Сторіс New episode англійською" loading="lazy"><figcaption>Сторіс · EN</figcaption></figure>
+          </div>
+        </div>
+      </div>
+      <figure><img src="img/ig_grid_en.webp" width="900" height="1050" alt="Англійська версія сітки Instagram: I break games. Sometimes vice versa." loading="lazy" style="max-width:560px"><figcaption>Англійські версії для Instagram і TikTok лежать у 05_instagram_en. Слоган англійською: «I break games. Sometimes vice versa.» Самі епізоди лишаються українськими, тому в підписах — «Ukrainian let's plays».</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ch" id="motion">
+    <div class="rail"><b>09</b>Рух</div>
+    <div class="body">
+      <h2>Інтро й кінцева заставка</h2>
+      <p class="prose">Інтро розігрує слоган: екран гри ламається, слово «навпаки» перевертає кадр, а з QQ капають сльози. Аутро має два варіанти — за вердиктом епізоду. Очі QQ дивляться на відео, яке пропонує YouTube, а потім на кнопку підписки.</p>
+      <figure><video src="media/intro_short.mp4" poster="media/intro_poster.webp" controls muted playsinline preload="none" width="1280" height="720"></video><figcaption>Інтро, коротка версія 3,6 с — ставиться після першої фрази епізоду.</figcaption></figure>
+      <div class="g2">
+        <figure><video src="media/outro_win.mp4" poster="media/outro_win.webp" controls muted playsinline preload="none" width="1280" height="720"></video><figcaption>Аутро «Гру зламано.» 12 с</figcaption></figure>
+        <figure><video src="media/outro_lose.mp4" poster="media/outro_lose.webp" controls muted playsinline preload="none" width="1280" height="720"></video><figcaption>Аутро «Гра зламала мене.» 12 с</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="ch" id="edit">
+    <div class="rail"><b>10</b>Монтаж</div>
+    <div class="body">
+      <h2>Монтаж у DaVinci Resolve</h2>
+      <p class="prose">Бренд у монтажі — пʼять повторюваних елементів, а не ефекти. На бренд в одному епізоді йде <strong>не більше 10 хвилин</strong>, решта часу — на гру й голос. Усі елементи лежать готовими в <code>D:\LetsPlay\brand\kirQQn_resolve_pack</code>: відео з прозорим фоном (ProRes 4444, 2560×1440, 60 к/с — як запис OBS) і звуком усередині. Кладеш на доріжку над грою — і все.</p>
+      <div class="tl">
+        <div class="bar" role="img" aria-label="Структура епізоду: захід, інтро, тіло з бренд-елементами, вихід, аутро">
+          <div class="seg s-hook">Захід</div>
+          <div class="seg s-intro">Інтро</div>
+          <div class="seg s-body">Тіло — прямі склейки
+            <span class="pin p-skip" style="left:18%" data-l="ПЕРЕМОТКА"></span>
+            <span class="pin p-one" style="left:34%" data-l="+1 qq"></span>
+            <span class="pin p-qq" style="left:48%" data-l="QQ"></span>
+            <span class="pin p-gl" style="left:62%" data-l="ГЛІТЧ"></span>
+            <span class="pin p-one" style="left:76%" data-l="+1 qq"></span>
+            <span class="pin p-qq" style="left:88%" data-l="QQ"></span>
+          </div>
+          <div class="seg s-exit">Вихід</div>
+          <div class="seg s-outro">Аутро</div>
+        </div>
+        <div class="legend">
+          <div><b>Захід</b>«Це kirQQn. Сьогодні ми ламаємо &lt;гра&gt;.» Голосом, 0:00–0:15.</div>
+          <div><b>Інтро</b>Коротке, 3,6 с, одразу після фрази. Не першою секундою.</div>
+          <div><b>Тіло</b>Прямі склейки. Перемотка, до трьох емоцій QQ, +1 qq на фейлах.</div>
+          <div><b>Вихід</b>«&lt;Гра&gt; — зламана» або «&lt;Гра&gt; зламала мене». Опційно «Ціна: сім qq».</div>
+          <div><b>Аутро</b>12 с. Win — якщо зламана, lose — якщо зламала тебе.</div>
+        </div>
+      </div>
+      <figure><video src="media/resolve_demo.mp4" poster="media/resolve_demo.webp" controls muted playsinline preload="none" width="1280" height="720"></video><figcaption>Усі оверлеї по черзі: емоція QQ, +1 qq, перемотка, глітч. Фон намальований; у монтажі під ними — гра.</figcaption></figure>
+      <div class="packgrid">
+        <figure><img src="img/ov_sticker.webp" width="960" height="540" alt="Емоція QQ «перемога» вискакує в правому нижньому куті кадру"><figcaption><code>qq_pop_*.mov</code> · 1,5 с · до трьох на епізод</figcaption></figure>
+        <figure><img src="img/ov_plus.webp" width="960" height="540" alt="Напис +1 qq зі сльозою"><figcaption><code>plus_one_qq.mov</code> · 1,2 с · на кожен фейл</figcaption></figure>
+        <figure><img src="img/ov_skip.webp" width="960" height="540" alt="Плашка «Перемотка» у лівому верхньому куті"><figcaption><code>skip_hud.mov</code> · 1,8 с · над склейкою, де вирізано мертвий шматок</figcaption></figure>
+        <figure><img src="img/ov_glitch.webp" width="960" height="540" alt="Глітч-перехід із кольоровими смугами"><figcaption><code>glitch_stinger.mov</code> · 0,5 с · серединою на склейці, тільки для великих стрибків</figcaption></figure>
+      </div>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Момент в епізоді</th><th>Емоція</th><th>Файл</th></tr></thead>
+        <tbody>
+          <tr><td>Фейл, смерть, «ну як так»</td><td>Плач</td><td><code>qq_pop_cry.mov</code></td></tr>
+          <tr><td>Скример, раптова смерть, поворот</td><td>Шок</td><td><code>qq_pop_shock.mov</code></td></tr>
+          <tr><td>Клатч, скарб, бос з першої спроби</td><td>Перемога</td><td><code>qq_pop_win.mov</code></td></tr>
+          <tr><td>Нечесний бос, баг, «ще раз?!»</td><td>Лють</td><td><code>qq_pop_rage.mov</code></td></tr>
+          <tr><td>Повний розгром</td><td>Гейм овер</td><td><code>qq_pop_dead.mov</code></td></tr>
+          <tr><td>«Дивіться сюди»</td><td>Погляд</td><td><code>qq_pop_look.mov</code></td></tr>
+          <tr><td>Пауза, нудне завантаження</td><td>Офлайн</td><td><code>qq_pop_sleep.mov</code></td></tr>
+        </tbody>
+      </table></div>
+      <div class="rules">
+        <div><h3>Переходи</h3><p>Тільки прямі склейки. Стандартні переходи Resolve (Cross Dissolve, Slide, Zoom) не з бренду. Глітч — лише на стрибок у часі чи місці.</p></div>
+        <div><h3>Текст на екрані</h3><p>Службовий підпис: JetBrains Mono Bold 40–48, білий, капсом, один рядок, лівий нижній кут. Великий текст-реакція: Unbounded Black, обводка <code>#07070B</code> (Inspector → Shading → Element 2).</p></div>
+        <div><h3>Субтитри</h3><p>У довгих епізодах не робити. Автосубтитри з голосу в Resolve є тільки в платній Studio, а вручну це години на епізод.</p></div>
+        <div><h3>Звук</h3><p>Голос головний, гра його не перекриває. Перед рендером: Fairlight → Loudness Meter, ціль −14 LUFS, true peak не вище −1 dBTP. Інтро й аутро вже зведені.</p></div>
+        <div><h3>Водяний знак</h3><p>У відео не вшивати. У YouTube Studio → Брендинг → Водяний знак відео постав <code>youtube_video_watermark_300.png</code>: він клікабельний і з'являється на всіх відео сам.</p></div>
+        <div><h3>Рендер</h3><p>Пресет «kirQQn YouTube»: 2560×1440, 60 к/с, H.264, 24 000 Kb/s. Усі поля — у таблиці нижче.</p></div>
+      </div>
+      <div class="prose" id="export"><h3>Експорт для YouTube — пресет «kirQQn YouTube»</h3><p>Перевірено за <a href="https://support.google.com/youtube/answer/1722171">рекомендаціями YouTube для завантаження</a>, Resolve 21.1. Deliver → Custom Export, виставити один раз і зберегти: меню «…» біля назви → Save as New Preset. Якщо якогось поля у твоєму енкодері нема — лиши за замовчуванням.</p></div>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Поле</th><th>Значення</th><th>Чому</th></tr></thead>
+        <tbody>
+          <tr><td>Таймлайн (Project Settings)</td><td class="v">2560×1440, 60 к/с</td><td>Як пише OBS. Менший таймлайн стискає гру ще до YouTube</td></tr>
+          <tr><td>Format</td><td class="v">MP4</td><td>Контейнер, який радить YouTube</td></tr>
+          <tr><td>Codec</td><td class="v">H.264</td><td>YouTube радить саме його. H.265 приймає, але все одно перекодовує</td></tr>
+          <tr><td>Encoder</td><td class="v">NVIDIA, якщо є в списку; інакше Native</td><td>NVIDIA рендерить швидше. Native теж годиться, просто довше</td></tr>
+          <tr><td>Network Optimization</td><td class="v">Увімкнено</td><td>Індекс файлу на початку (Fast Start) — вимога YouTube</td></tr>
+          <tr><td>Resolution</td><td class="v">2560×1440</td><td>За спостереженнями авторів, від 1440p YouTube стискає кращим кодеком — чіткіше навіть у 1080p</td></tr>
+          <tr><td>Frame rate</td><td class="v">60</td><td>Та сама частота, з якою записано</td></tr>
+          <tr><td>Quality</td><td class="v">Restrict to 24 000 Kb/s</td><td>Рекомендація YouTube для 1440p60. Ліміту нема: при швидкій заливці можна 40 000 для темних ігор</td></tr>
+          <tr><td>Encoding Profile</td><td class="v">High</td><td>Вимога YouTube для H.264</td></tr>
+          <tr><td>Key Frames</td><td class="v">Every 30 frames</td><td>YouTube: група кадрів — половина частоти кадрів</td></tr>
+          <tr><td>Frame reordering</td><td class="v">Увімкнено</td><td>Вмикає B-кадри, YouTube радить 2 підряд</td></tr>
+          <tr><td>Data Levels</td><td class="v">Auto</td><td>Інакше картинка може вийти блідою або з «провалленим» чорним</td></tr>
+          <tr><td>Color Space / Gamma Tag</td><td class="v">Same as Project (Rec.709)</td><td>YouTube радить BT.709 для звичайного SDR</td></tr>
+          <tr><td>Audio</td><td class="v">AAC, 320+ Kb/s, 48 000 Hz, стерео</td><td>YouTube радить 48 кГц і 384 Kb/s для стерео. Постав найбільше, що є у списку Resolve</td></tr>
+        </tbody>
+      </table></div>
+      <div class="rules">
+        <div><h3>Пресет для вертикалок</h3><p>Пресет «kirQQn Vertical»: те саме, але 1080×1920 і Restrict to 12 000 Kb/s — рекомендація YouTube для 1080p60.</p></div>
+        <div><h3>Перевірка після заливки</h3><p>Правий клік по відео → Stats for nerds → Codecs: <code>vp09</code> або <code>av01</code> — добре, <code>avc1</code> — гірше. Якщо картинка блідіша, ніж у Resolve, винні теги кольору.</p></div>
+      </div>
+      <div class="vert">
+        <img src="img/ov_bug_vertical.webp" width="405" height="720" alt="Вертикальний кадр зі знаком QQ і @kirqqn над зоною підпису">
+        <div class="prose"><h3>Вертикалки</h3><p>Без інтро й аутро — перші три секунди займає сама подія. Гачок-текст зверху: Unbounded Black, не вище 130 px від верху й не правіше ~900 px, бо справа кнопки TikTok, і не ближче ~96 px до лівого краю — на високих телефонах стрічка обрізає боки. <code>handle_bug_vertical.png</code> — на верхню доріжку на весь кліп, він уже стоїть у безпечній зоні. Одна емоція QQ на кульмінацію. Тексту мінімум і англійською: один файл іде на Shorts, TikTok і Reels.</p></div>
+      </div>
+      <div class="dos">
+        <div class="yes"><h3>Чек-лист епізоду</h3><ol class="checks">
+          <li>Захід голосом і коротке інтро після нього</li>
+          <li>Прямі склейки, перемотка на вирізаних шматках</li>
+          <li>До трьох емоцій QQ і +1 qq на фейлах</li>
+          <li>Вихід голосом і правильне аутро</li>
+          <li>Fairlight: −14 LUFS</li>
+          <li>Рендер пресетом «kirQQn YouTube»</li>
+          <li>Превʼю в конструкторі, кінцева заставка в Studio</li>
+        </ol></div>
+        <div class="no"><h3>Не робити</h3><ul>
+          <li>Стандартні переходи, зум на кожну репліку, тряску камери.</li>
+          <li>Музику з інтернету — Content ID. Увесь звук бренду синтезований.</li>
+          <li>Більше трьох стікерів на епізод.</li>
+          <li>Текст на пів екрана в довгих епізодах.</li>
+        </ul></div>
+      </div>
+      <p class="prose">Разове налаштування — один вечір: встановити шрифти з <code>kirQQn_kit_3_fonts_licenses_sound</code>, зібрати таймлайн-шаблон <code>_ШАБЛОН</code> (V1 гра, V2 бренд; A1 гра, A2 голос, A3 бренд) і зберегти два пресети рендеру. Покрокова інструкція — у файлі <code>ЯК_МОНТУВАТИ_В_RESOLVE.md</code> поруч з оверлеями.</p>
+    </div>
+  </section>
+
+  <section class="ch" id="guides">
+    <div class="rail"><b>11</b>Гайди</div>
+    <div class="body">
+      <h2>Гайди: крок, який видно з телефона</h2>
+      <p class="prose">Глядач гайду тримає телефон в одній руці, а гру — в іншій. Кожна картка за дві секунди відповідає на три питання: <strong>де я</strong>, <strong>що зробити</strong> і <strong>що буде</strong>. Усе, що не відповідає на жодне з них, з картки прибрано.</p>
+      <div class="gpair">
+        <figure><img src="img/guide_before.webp" width="720" height="1280" alt="Стара картка гайду з шістьма позначеними проблемами й рожевими зонами інтерфейсу TikTok"><figcaption>Було. Рожеве — те, що закривають кнопки й підпис TikTok. Номери — у таблиці нижче.</figcaption></figure>
+        <figure><img src="img/guide_after.webp" width="720" height="1280" alt="Нова картка кроку: номер 02, назва, кадр на всю ширину, лінза на репліках, салатова плашка з вибором і наслідок"><figcaption>Стало. Той самий тип кроку — вибір у діалозі. Кадр з епізоду про Коена: оригінального скріна з Ксанте в мене немає.</figcaption></figure>
+      </div>
+      <div class="tablewrap"><table>
+        <thead><tr><th>#</th><th>Що було</th><th>Чому шкодить</th><th>Що замість</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1</td><td>Геймплей — смуга 16:9 на третину екрана</td><td>Рядки діалогу на телефоні ~5 px, не прочитати</td><td>Кадр 1080×660 на всю ширину й лінза на потрібні рядки</td></tr>
+          <tr><td class="n">2</td><td>Дві салатові плашки: «5 /» і назва</td><td>Два акценти сперечаються, «/» без загальної кількості</td><td>Контурний номер «05», лічильник «05/12» і смужка прогресу</td></tr>
+          <tr><td class="n">3</td><td>Дія тим самим шрифтом, що й підпис</td><td>Головне виглядає як примітка</td><td>Дія — єдина салатова плашка на картці</td></tr>
+          <tr><td class="n">4</td><td>Порада й логотип унизу</td><td>Їх закривають підпис, нікнейм і кнопки</td><td>Усе, що треба прочитати, — вище 1440 px</td></tr>
+          <tr><td class="n">5</td><td>Порожні смуги без ролі</td><td>Екран порожній, а потрібне дрібне</td><td>Сітка, де кожна зона має задачу</td></tr>
+          <tr><td class="n">6</td><td>Два різні чорні: поля відео й фон</td><td>Видно шви, кадр «вклеєний»</td><td>Кадр без полів, з кутами видошукача</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Анатомія кроку</h3>
+      <figure><img src="img/guide_anatomy.webp" width="1080" height="1224" alt="Картка кроку з розміткою зон: шапка, прогрес, номер і назва, геймплей, лінза, дієслово, дія, наслідок і межі безпечної зони"><figcaption>Полотно 1080×1920. Пунктир — безпечна зона: x 96…900, y 130…1440. Боки стрічка обрізає на високих телефонах, справа — кнопки.</figcaption></figure>
+      <h3>Частина гайду: обкладинка → кроки → «Далі»</h3>
+      <figure><img src="img/guide_part.webp" width="2232" height="960" alt="Чотири картки частини гайду: обкладинка PART 1/2, крок 01, крок 02 і картка UP NEXT PT 2"><figcaption>Кожна частина — окреме відео. Нумерація кроків наскрізна, смужка прогресу показує весь гайд. «Далі» стоїть у кінці кожної частини, крім останньої.</figcaption></figure>
+      <h3>Обкладинка — плакат</h3>
+      <figure><img src="img/guide_poster.webp" width="1500" height="820" alt="Плакат v1.3 у стрічці TikTok на високому телефоні, на полиці YouTube (2:3) і в сітці профілю TikTok (3:4)"><figcaption>Плакат на весь кадр. У стрічці це перші кадри відео: боки обрізано, справа кнопки — тому поле 96 px і знак QQ у лівій колонці. На полиці YouTube — плитка 2:3, у сітці профілю TikTok — 3:4 (смуга 240–1680 px).</figcaption></figure>
+      <div class="rules">
+        <div><h3>Що це</h3><p>Перші 1–1,2 с відео і кадр, який обирають обкладинкою Short. Під плакатом іде живе відео, тож перший кадр уже рухається.</p></div>
+        <div><h3>Кадр</h3><p>Найсвітліший момент з обличчям або нагородою, на весь екран, <strong>чистий — без субтитрів, HUD і підказок</strong>. Під плакатом — той самий чистий кадр. Темні кадри конструктор висвітлює сам, до ×1,35.</p></div>
+        <div><h3>Гачок</h3><p>Обіцянка, яку відео виконує: нагорода або ставка, 2–5 слів. Слово-цінність — на салатовій плашці: <code>LEGENDARY SWORD: SAINT MIHAI</code>.</p></div>
+        <div><h3>Своя обкладинка</h3><p>Завантажити окрему обкладинку Short можна тільки з комп'ютера й у Партнерській програмі. До того — кадр з плаката.</p></div>
+      </div>
+      <div class="guide-row">
+        <figure class="vfig"><video src="media/guide_demo.mp4" poster="media/guide_demo.webp" controls muted playsinline preload="none" width="1080" height="1920"></video><figcaption>Демо 10 с. Картки змінюються склейкою під <code>guide_step_wipe.mov</code>.</figcaption></figure>
+        <div class="rules">
+          <div><h3>Колір</h3><p>Салатовий — тільки те, що робить гравець: плашка дії й мітка в лінзі. Рожевий — тільки «уникай». Решта — білий і смоук.</p></div>
+          <div><h3>Текст</h3><p>Англійською. Назва — дієслово + об'єкт, до 4 слів. Репліка — дослівно, як у грі. Наслідок — до 7 слів: ✓ добре, → підказка, ✕ уникай.</p></div>
+          <div><h3>Лінза</h3><p>На кожному виборі в діалозі — обов'язково. Тільки потрібні рядки з запасом, мітка на правильному. Джерело — повний скрін 2560×1440.</p></div>
+          <div><h3>Частини PT</h3><p>Понад 8 кроків — ділити. У PT 2 перший крок той, що після останнього з PT 1. Назва відео: <code>Гайд — PT 2/3 | гра</code>.</p></div>
+          <div><h3>Тривалість</h3><p>Крок: 1 с + 0,4 с на кожне слово, не менше 2,5 с. Обкладинка 1–1,2 с, «Далі» 2 с. Це міркування, не вимір.</p></div>
+          <div><h3>Скріни</h3><p>Повна роздільність, субтитри в грі ввімкнені. Без плеєра YouTube, оверлеїв Resolve і курсора.</p></div>
+        </div>
+      </div>
+      <h3>Збірка в Resolve</h3>
+      <figure class="ovpair"><img src="img/guide_overlay.webp" width="1104" height="960" alt="Картка кроку і її версія-оверлей з прозорим вікном замість кадру"><figcaption>Ліворуч — готова картка. Праворуч — оверлей: вікно під кадр прозоре, лінза — нерухомий фрагмент скріна, під ним іде живе відео.</figcaption></figure>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Доріжка</th><th>Що</th><th>Налаштування</th></tr></thead>
+        <tbody>
+          <tr><td class="n">V1</td><td>Геймплей кроку</td><td>Zoom <b>1.087</b>, Position Y <b>+180</b>. Обкладинка: Zoom <b>3.161</b>, Position Y 0, Position X — на обличчя чи нагороду. «Далі»: Zoom 1.0, Position Y 0</td></tr>
+          <tr><td class="n">V2</td><td>PNG з <code>resolve_overlay</code></td><td>На всю довжину картки</td></tr>
+          <tr><td class="n">V3</td><td><code>guide_step_wipe.mov</code></td><td>Серединою на склейці, звук уже всередині</td></tr>
+        </tbody>
+      </table></div>
+      <p class="prose">Таймлайн 1080×1920, 60 к/с. Орієнтовно на частину з 6–8 кроків: 10–15 хвилин у конструкторі й 15–20 у Resolve. Це оцінка: справжній час покаже тижневий журнал.</p>
+      <h3>Для ChatGPT</h3>
+      <p class="prose">GPT дотримується гайдлайну на 100 % тільки тоді, коли <strong>запускає скрипт</strong>, а не малює. У скрипті зашиті розміри, шрифти й кольори, а перевірка зупиняє рендер, якщо текст задовгий, немає лінзи на виборі чи частина без картки «Далі». Чого скрипт не знає: чи правдиві вибір і наслідок і чи лінза на тому рядку. Це GPT має питати в тебе.</p>
+      <p class="prose">Архів <code>kirqqn_guide.zip</code> лежить у <code>D:\LetsPlay\brand</code>. Додай його в знання свого GPT, а текст з <code>GPT_INSTRUCTIONS.md</code> — в інструкції. Цю сторінку GPT може не прочитати: вона збирається скриптом у Claude. Тому всі правила лежать в архіві окремим файлом <code>ГАЙДЛАЙН_ГАЙДИ.md</code>.</p>
+      <div class="dlrow">
+        <button type="button" class="primary" data-dl="files/ГАЙДЛАЙН_ГАЙДИ.md" data-name="ГАЙДЛАЙН_ГАЙДИ.md">Гайдлайн · MD</button>
+        <a href="https://claude.ai/artifact/HfbybHdFD4qqxQZJh6vLxg" target="_blank" rel="noopener">Конструктор гайдів ↗</a>
+        <span class="msg" id="gmsg" role="status"></span>
+      </div>
+      <div class="dos">
+        <div class="yes"><h3>Так</h3><ul>
+          <li>Лінза на кожному рядку, який треба прочитати</li>
+          <li>Одна салатова плашка — дія гравця</li>
+          <li>Номер кроку разом із загальною кількістю</li>
+          <li>Обкладинка на початку, «Далі» в кінці частини</li>
+          <li>Тільки вибори й наслідки з власного проходження</li>
+        </ul></div>
+        <div class="no"><h3>Ні</h3><ul>
+          <li>Геймплей смугою 16:9 з чорними полями</li>
+          <li>Текст нижче 1440 px, лівіше 96 px або правіше 900 px</li>
+          <li>Перефразована чи перекладена репліка з гри</li>
+          <li>Картка, намальована вручну або генератором зображень</li>
+          <li>«5 /» без загальної кількості кроків</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="episodes">
+    <div class="rail"><b>12</b>Епізоди</div>
+    <div class="body">
+      <h2>Графіка епізодів: в міру й влучно</h2>
+      <p class="prose">У довгому епізоді графіка має допомагати глядачеві, а не смикати його. Кожна картка відповідає на одне питання: <strong>де ми</strong>, <strong>що сказали</strong>, <strong>що помітити</strong> або <strong>як ми до цього ставимось</strong>. Якщо глядач і так усе зрозуміє з гри й голосу, картки немає.</p>
+      <div class="g2">
+        <figure><img src="img/ep_before.webp" width="1280" height="717" alt="Кадр епізоду: напис «Після заходу сонця» стоїть на шкалі здоров'я гри"><figcaption>Було. 1 — напис на шкалі здоров'я; 2 — без підкладки, зливається з HUD; 3 — той самий тип шрифту, що й інтерфейс гри: незрозуміло, титр це чи гра.</figcaption></figure>
+        <figure><img src="img/ep_after.webp" width="1280" height="720" alt="Той самий кадр: картка розділу зліва вгорі, на затемненні, HUD вільний"><figcaption>Стало. Картка розділу у вільній зоні зліва вгорі, на м'якому затемненні. HUD гри видно повністю.</figcaption></figure>
+      </div>
+      <h3>Спершу карта HUD, потім місце для картки</h3>
+      <figure><img src="img/ep_hud.webp" width="1280" height="720" alt="Карта HUD Dawnwalker: рожеві зони інтерфейсу гри, блакитні — плеєра YouTube, салатові — чотири місця для карток"><figcaption>Dawnwalker, 2560×1440. Рожеве — HUD гри, блакитне — плеєр YouTube, салатове — чотири місця для карток: TL, TC, BC, BL. Для нової гри карту HUD перевіряють один раз на скріні в конструкторі.</figcaption></figure>
+      <h3>Сім карток</h3>
+      <figure><img src="img/ep_cards.webp" width="2432" height="916" alt="Шість прикладів карток: мета, порада, час і лічильник, переклад, підсумок, розділ"><figcaption>Мета · порада · час і лічильник qq · переклад · підсумок · розділ. Підпис персонажа видно на кадрі з перекладом.</figcaption></figure>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Картка</th><th>Код</th><th>Місце</th><th>Тривалість</th><th>На епізод</th></tr></thead>
+        <tbody>
+          <tr><td>Мета</td><td class="n">GOAL</td><td class="n">TL</td><td class="n">5–6 с</td><td>1, перша</td></tr>
+          <tr><td>Розділ</td><td class="n">CH</td><td class="n">TL</td><td class="n">3 с</td><td>до 4</td></tr>
+          <tr><td>Підпис: місце, персонаж, предмет, ворог, квест</td><td class="n">LOC WHO ITEM ENEMY QUEST</td><td class="n">TL</td><td class="n">3 с</td><td>до 8</td></tr>
+          <tr><td>Час</td><td class="n">TIME</td><td class="n">TC</td><td class="n">3 с</td><td>входить у підписи</td></tr>
+          <tr><td>Порада</td><td class="n">TIP</td><td class="n">TL, BC</td><td class="n">1 с + 0,4 с/слово</td><td>до 3</td></tr>
+          <tr><td>Переклад</td><td class="n">TR</td><td class="n">BC</td><td class="n">1 с + 0,4 с/слово</td><td>до 6</td></tr>
+          <tr><td>Лічильник qq</td><td class="n">QQ</td><td class="n">BL</td><td class="n">2 с</td><td>до 6</td></tr>
+          <tr><td>Підсумок</td><td class="n">VERDICT</td><td class="n">TL</td><td class="n">6 с</td><td>1, остання</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Переклад — головна фішка формату</h3>
+      <p class="prose">Гра англійською, канал українською. Картка перекладу з'являється разом із реплікою над субтитрами гри й тримається час читання. Перекладають сюжет, вибір і жарти, а також записки в грі. Не перекладають кожну фразу: для цього є субтитри. Переклад — природною українською, сенс важливіший за дослівність. Перевіряє його Сергій.</p>
+      <h3>Рух, реакції й меми</h3>
+      <figure><img src="img/ep_motion.webp" width="2436" height="688" alt="Вісім кадрів руху: перехід розділу, поява картки, обвідка, удар-зум, стоп-кадр і три мем-штампи"><figcaption>Перехід розділу · поява картки · обвідка · удар-зум · стоп-кадр · штампи «Так і задумано», «План був ідеальний», «Це не баг, це фіча». Усе своє, без чужих мемів і музики — Content ID немає до чого причепитись.</figcaption></figure>
+      <div class="guide-row">
+        <figure class="vfig" style="max-width:100%"><video src="media/episode_demo.mp4" poster="media/episode_demo.webp" controls muted playsinline preload="none" width="1920" height="1080" style="aspect-ratio:16/9"></video><figcaption>Демо 24 с: мета й розділ, порада, час, обвідка, переклад, стоп-кадр, мем-штамп, лічильник, підсумок.</figcaption></figure>
+      </div>
+      <div class="rules">
+        <div><h3>Одна картка за раз</h3><p>Ніколи дві одночасно. Не більше 2 за будь-яку хвилину й 8 за 10 хвилин. Перші 15 секунд — гачок, без карток.</p></div>
+        <div><h3>Мем-штампи</h3><p>До 2 на епізод і не частіше ніж раз на 5 хвилин. Мем ставлять туди, де момент і без нього смішний.</p></div>
+        <div><h3>Колір</h3><p>Салатовий — один акцент на картку. Рожевий — тільки невдалий пункт підсумку. Текст ніколи не стоїть просто на HUD чи яскравій сцені.</p></div>
+        <div><h3>QQ у Dawnwalker</h3><p>Правий нижній кут зайнятий предметами: для <code>qq_pop_*.mov</code> Inspector → Position Y +360.</p></div>
+      </div>
+      <h3>Збірка в Resolve</h3>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Крок</th><th>Що робити</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1</td><td>Під час перегляду на 2× маркер (M) з текстом коду: <code>TR Coen: …</code>, <code>CH 2 Назва / підпис</code>, <code>TIP …</code></td></tr>
+          <tr><td class="n">2</td><td>Timeline → Export → Timeline Markers to EDL. Або список рядків <code>00:12:30:00 TIP …</code></td></tr>
+          <tr><td class="n">3</td><td>Конструктор «Титри kirQQn» → імпорт → ZIP з PNG, таймкод у назві кожного файлу</td></tr>
+          <tr><td class="n">4</td><td>PNG на V2 у свої таймкоди. Розділ, мета, підсумок — з <code>ep_card_in</code> / <code>ep_card_out</code> на V3; решта — ручки фейду 4 кадри</td></tr>
+        </tbody>
+      </table></div>
+      <p class="prose">Орієнтовно 15–20 хвилин на графіку епізоду. Це оцінка: справжній час покаже тижневий журнал. Якщо виходить більше, ріж кількість карток.</p>
+      <h3>Для ChatGPT</h3>
+      <p class="prose">Так само, як із гайдами: GPT дотримується правил на 100 % тільки тоді, коли <strong>запускає скрипт</strong> <code>kirqqn_episode.py</code>. Скрипт зупиняє рендер, якщо карток забагато, вони накладаються, стоять у перших 15 секундах, текст задовгий чи мем повторюється раніше ніж за 5 хвилин. Правильність перекладу й правдивість місць перевіряє людина. Архів <code>kirqqn_episode.zip</code> лежить у <code>D:\LetsPlay\brand</code>.</p>
+      <div class="dlrow">
+        <button type="button" class="primary" data-dl="files/ГАЙДЛАЙН_ЕПІЗОДИ.md" data-name="ГАЙДЛАЙН_ЕПІЗОДИ.md">Гайдлайн епізодів · MD</button>
+        <a href="https://claude.ai/artifact/XJRUVtEiW1AWCbMrpyTyMM" target="_blank" rel="noopener">Конструктор титрів ↗</a>
+        <span class="msg" id="emsg" role="status"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch" id="specs">
+    <div class="rail"><b>13</b>Розміри</div>
+    <div class="body">
+      <h2>Що куди завантажувати</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Платформа</th><th>Носій</th><th>Розмір</th><th>Файл в архіві</th></tr></thead>
+        <tbody>
+          <tr><td>YouTube</td><td>Банер</td><td class="n">2560×1440</td><td><code>04_youtube/youtube_banner_2560x1440.png</code></td></tr>
+          <tr><td>YouTube</td><td>Аватар</td><td class="n">1080×1080</td><td><code>03_avatars/avatar_main_void.png</code></td></tr>
+          <tr><td>YouTube</td><td>Водяний знак</td><td class="n">300×300</td><td><code>04_youtube/youtube_video_watermark_300.png</code></td></tr>
+          <tr><td>YouTube</td><td>Превʼю</td><td class="n">1280×720, ≤2 МБ</td><td>Конструктор превʼю</td></tr>
+          <tr><td>YouTube</td><td>Кінцева заставка</td><td class="n">1920×1080, 12 с</td><td><code>kirQQn_outro_win / lose_1080p60.mp4</code></td></tr>
+          <tr><td>Instagram</td><td>Аватар</td><td class="n">1080×1080</td><td><code>03_avatars/avatar_main_void.png</code></td></tr>
+          <tr><td>Instagram</td><td>Пости</td><td class="n">1080×1440 (3:4)</td><td><code>05_instagram/post_*.jpg</code></td></tr>
+          <tr><td>Instagram</td><td>Сторіс і хайлайти</td><td class="n">1080×1920</td><td><code>05_instagram/story_*.jpg, highlight_*.jpg</code> · EN: <code>05_instagram_en/</code></td></tr>
+          <tr><td>TikTok, Twitch</td><td>Аватар</td><td class="n">1080×1080</td><td><code>03_avatars/avatar_alt_lime.png</code></td></tr>
+        <tr><td>Resolve</td><td>Оверлеї, стікери, звуки</td><td class="n">2560×1440, 60 к/с, з прозорістю</td><td><code>kirQQn_resolve_pack/</code></td></tr>
+        </tbody>
+      </table></div>
+      <div class="dos">
+        <div class="yes"><h3>Так</h3><ul><li>Одна емоція QQ на превʼю — вердикт епізоду.</li><li>Одне виділене слово на заголовок.</li><li>Скрін з подією або обличчям персонажа — чистий, без інтерфейсу гри.</li><li>Темний фон, щоб QQ світились.</li></ul></div>
+        <div class="no"><h3>Ні</h3><ul><li>Не перефарбовувати QQ в інші кольори, крім чорного.</li><li>Не розтягувати й не нахиляти вордмарк.</li><li>Не ставити нічого в правий нижній кут превʼю.</li><li>Не лишати на обкладинці субтитри, HUD, підказки кнопок і меню гри.</li><li>Не додавати інтро у вертикальні відео.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><span>kirQQn · @kirqqn · Київ</span><span>Ламаю ігри. Іноді навпаки.</span></footer>
+</div>
+
+<script>
+(() => {
+  const URL_SHARE = 'https://claude.ai/artifact/19tnt5oyNNGCSxxq2p7DDL';
+  const msg = document.getElementById('msg');
+  const say = (t, c) => { msg.textContent = t; msg.className = 'msg ' + (c || ''); };
+  let downloads = null;
+  (async () => { try { downloads = await window.claude?.use?.('downloads'); } catch (e) {} })();
+  document.getElementById('dl').addEventListener('click', async () => {
+    say('Готую PDF…');
+    try {
+      const blob = await (await fetch('kirQQn_brandbook.pdf')).blob();
+      if (downloads) { await downloads.save({ filename: 'kirQQn_brandbook.pdf', data: blob }); say('PDF збережено.', 'ok'); }
+      else { const u = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = u; a.target = '_blank'; a.rel = 'noopener'; a.click(); say('PDF відкрито в новій вкладці — збережи його звідти.', 'ok'); }
+    } catch (e) { say(e && e.code === 'declined' ? 'Збереження скасовано.' : 'Не вдалося отримати PDF. Спробуй ще раз.', 'err'); }
+  });
+
+  const gmsg = document.getElementById('gmsg');
+  const gsay = (t, c) => { gmsg.textContent = t; gmsg.className = 'msg ' + (c || ''); };
+  document.querySelectorAll('[data-dl]').forEach(b => b.addEventListener('click', async () => {
+    const m = b.parentElement.querySelector('.msg'); const gsay = (t, c) => { m.textContent = t; m.className = 'msg ' + (c || ''); };
+    gsay('Готую файл…');
+    try {
+      const blob = await (await fetch(b.dataset.dl)).blob();
+      if (downloads) { await downloads.save({ filename: b.dataset.name, data: blob }); gsay('Збережено: ' + b.dataset.name, 'ok'); }
+      else gsay('Збереження тут недоступне. Відкрий сторінку в Claude.', 'err');
+    } catch (e) { gsay(e && e.code === 'declined' ? 'Збереження скасовано.' : 'Не вдалося отримати файл. Спробуй ще раз.', 'err'); }
+  }));
+  document.getElementById('share').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(URL_SHARE); say('Посилання скопійовано.', 'ok'); }
+    catch (e) { msg.className = 'msg'; msg.innerHTML = ''; const s = document.createElement('span'); s.className = 'url'; s.textContent = URL_SHARE; msg.append(s); }
+  });
+})();
+</script>
+
+</body></html>

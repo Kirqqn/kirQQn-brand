@@ -10,7 +10,7 @@
 | Папка | Що всередині |
 |---|---|
 | [`brandbook/`](brandbook/) | `kirQQn_brandbook.pdf`; `web/` — знімок онлайн-брендбука v1.6 з картинками й відео; `archive/` — старі версії PDF |
-| [`guidelines/`](guidelines/) | Гайдлайни гайдів, епізодів і монтажу в Resolve, якість монтажу, ліцензії, походження звуку |
+| [`guidelines/`](guidelines/) | Гайдлайни гайдів, епізодів і монтажу в Resolve, якість монтажу, **креативний плейбук** (тип моменту → хід монтажу, формули превʼю й гачків), ліцензії, походження звуку |
 | [`assets/logo_emotions_avatars/`](assets/logo_emotions_avatars/) | `01_logo` — вордмарк і знак QQ (SVG/PNG); `02_qq_emotions` — 7 емоцій; `03_avatars` |
 | [`assets/youtube_instagram/`](assets/youtube_instagram/) | Банер і водяний знак YouTube, приклади обкладинок; пости, сторіс і хайлайти Instagram (UA та `_en`) |
 | [`assets/fonts/`](assets/fonts/) | Unbounded, JetBrains Mono, Golos Text з ліцензіями OFL |

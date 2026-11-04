@@ -3,7 +3,7 @@
 Тут зібрано все для оформлення контенту kirQQn, українського каналу летсплеїв: брендбук, гайдлайни, логотипи, емоції QQ, шрифти, інтро й аутро, оверлеї для DaVinci Resolve, конструктори обкладинок і гайдів, пресети рендеру.
 
 > **AI, почни звідси:** [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md) — правила та порядок джерел.
-> Прямі посилання на файли: `https://raw.githubusercontent.com/{OWNER}/kirQQn-brand/main/<шлях>`
+> Прямі посилання на файли: `https://raw.githubusercontent.com/Kirqqn/kirQQn-brand/main/<шлях>`
 
 ## Структура
 

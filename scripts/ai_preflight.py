@@ -39,7 +39,8 @@ def main():
     args = parser.parse_args()
     root = args.brand_dir.resolve()
     try:
-        if run("rev-parse", "--show-toplevel", cwd=root) != str(root):
+        # Compare as paths, not strings: on Windows git prints "D:/x" while pathlib gives "D:\x".
+        if pathlib.Path(run("rev-parse", "--show-toplevel", cwd=root)).resolve() != root:
             raise RuntimeError("Brand directory must be the root of its own Git clone")
         remote = run("remote", "get-url", "origin", cwd=root)
         if not (remote.rstrip("/").removesuffix(".git").endswith("Kirqqn/kirQQn-brand")):

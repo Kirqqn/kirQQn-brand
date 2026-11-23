@@ -15,6 +15,7 @@ This repository is the **single source of truth** for the kirQQn Ukrainian Let's
    - `guidelines/ЯКІСТЬ_МОНТАЖУ.md`
    - `guidelines/ГАЙДЛАЙН_ЕПІЗОДИ.md`
    - `guidelines/ЛІЦЕНЗІЇ.md` and `guidelines/ПОХОДЖЕННЯ_ЗВУКУ.md` when sourcing music/SFX/voice.
+   - `guidelines/ГАЙДЛАЙН_МЕМИ.md` before adding any meme (own stamps first; third-party memes only with verified rights).
    For Shorts/guides, also read `guidelines/ГАЙДЛАЙН_ГАЙДИ.md` and `guidelines/ГАЙДЛАЙН_CTA_КОРОТКИХ.md`.
 4. Inspect the **actual current assets and source instructions**, instead of relying on guessed filenames:
    - `assets/intro_outro/`, `assets/logo_emotions_avatars/`, `resolve_pack/`, `assets/sound_source/`.
